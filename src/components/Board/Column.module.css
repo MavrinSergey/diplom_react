@@ -1,0 +1,28 @@
+.column {
+    flex-basis: 25%;
+    display: inline-block;
+    /*width: 24.7vw;*/
+    margin-top: 5px;
+    border-right: 1px dotted #000;
+    padding: 0;
+    text-align: center;
+}
+.column:last-child {
+    border-right: none;
+}
+
+.header {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.content {
+    margin: 0;
+    /*height: 70vh;*/
+    /*overflow-x: none;*/
+    overflow-y: hidden;
+}
+.content:hover {
+    overflow-y: auto;
+}

@@ -1,0 +1,15 @@
+.header {
+    grid-area: header;
+    /*height: 65px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    margin-left: 1vw;
+}
+
+.right {
+    margin-right: 15vw;
+}

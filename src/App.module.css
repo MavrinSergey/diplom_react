@@ -1,0 +1,17 @@
+.windowUser {
+
+    display: grid;
+    grid-template-rows: 5vh 90vh 5vh;
+    grid-template-columns: 1fr 7fr;
+    grid-template-areas:
+            "sidebar header"
+            "sidebar content"
+            "sidebar footer";
+}
+
+.content {
+    grid-area: content;
+    width: 100%;
+    overflow: hidden;
+}
+

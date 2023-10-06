@@ -1,0 +1,27 @@
+.sidebar {
+    grid-area: sidebar;
+    height: 100vh;
+    box-sizing: border-box;
+    /*width: 100%;*/
+    /*position: fixed;*/
+    z-index: 1;
+    /*top: 0;*/
+    /*left: 0;*/
+    background-color: #2196f3;
+    /*overflow-x: hidden;*/
+    transition: 0.5s;
+    padding-top: 50px;
+    /*display: none;*/
+}
+.link {
+    padding: 8px 25px;
+    /*text-align: center;*/
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+.link:hover {
+    color: white;
+}
