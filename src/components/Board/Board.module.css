@@ -1,11 +1,11 @@
 .title {
-    /*height: 15vh;*/
+    margin: 0;
     text-align: center;
 }
 .board {
     display: flex;
 
-    /*height: 75vh;*/
+    height: 85vh;
 }
 
 /*.hidden {*/
