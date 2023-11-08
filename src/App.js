@@ -6,7 +6,7 @@ import classes from "./App.module.css";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Projects from "./components/Projects/Projects";
 import {Route, Routes} from "react-router-dom";
-
+import store from "./redux/state";
 
 
 function App(props) {
@@ -16,7 +16,9 @@ function App(props) {
             <Header/>
             <div className={classes.content}>
                 <Routes>
-                    <Route path='/board' element={<Board tasks={props.state.tasks} addTask={props.addTask}/>}></Route>
+                    <Route path='/board' element={<Board state={props.state}
+                                                         dispatch={store.dispatch}
+                    />}></Route>
                     <Route path='/projects' element={<Projects/>}></Route>
                 </Routes>
             </div>

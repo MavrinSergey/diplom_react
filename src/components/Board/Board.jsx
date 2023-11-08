@@ -3,6 +3,8 @@ import Column from "./Column/Column";
 import board from "./Board.module.css";
 import Modal from "../Modal/Modal";
 import ModalAddTask from "./ModalAddTask/ModalAddTask";
+import store from "../../redux/state";
+
 
 const Board = (props) => {
     const [modalActive, setModalActive] = useState(true)
@@ -14,17 +16,19 @@ const Board = (props) => {
             <div className="btn-group">
                 <button className="btn" id="task-add" onClick={() => setModalActive(true)}>Add task</button>
                 <Modal active={modalActive} setActive={setModalActive}>
-                    <ModalAddTask addTask={props.addTask}/>
+                    <ModalAddTask newTaskData={props.state.newTaskData}
+                                  dispatch={store.dispatch.bind(store)}
+                    />
                 </Modal>
 
                 <button className="btn" id="task-delete">Delete</button>
                 <button className="btn" id="task-update">Update</button>
             </div>
             <div className={board.board} id="board">
-                <Column tasks={props.tasks.toWork}/>
-                <Column tasks={props.tasks.inWork}/>
-                <Column tasks={props.tasks.agreement}/>
-                <Column tasks={props.tasks.completed}/>
+                <Column tasks={props.state.tasks.toWork}/>
+                <Column tasks={props.state.tasks.inWork}/>
+                <Column tasks={props.state.tasks.agreement}/>
+                <Column tasks={props.state.tasks.completed}/>
             </div>
         </section>
     )
