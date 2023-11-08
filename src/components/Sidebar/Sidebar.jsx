@@ -1,11 +1,12 @@
 import React from "react";
 import sidebar from "./Sidebar.module.css";
+import {NavLink} from "react-router-dom";
 
 const Sidebar = () => {
-    return  (
+    return (
         <aside id="#" className={sidebar.sidebar}>
-            <a href="#" className={sidebar.link} id="open-ScrumBoard">ScrumBoard</a>
-            <a href="#" className={sidebar.link} id="open-ScrumBoard">Projects</a>
+            <NavLink to="/board" className={sidebar.link} id="open-ScrumBoard">ScrumBoard</NavLink>
+            <NavLink to="/projects" className={sidebar.link} id="open-ScrumBoard">Projects</NavLink>
         </aside>
     )
 }
