@@ -1,17 +1,18 @@
 import React from "react";
-import {addTaskActionCreator, updateNewTaskActionCreator} from "../../../redux/state";
+import stylesModalAddTask from './ModalAddTask.module.css';
+
 
 const ModalAddTask = (props) => {
 
     const newTitleTask = React.createRef();
 
-    const addTask = () => {
-        props.dispatch(addTaskActionCreator());
+    const onAddTask = () => {
+        props.addTask();
     }
 
     const onTaskChange = () => {
         const title = newTitleTask.current.value;
-        props.dispatch(updateNewTaskActionCreator(title));
+        props.updateNewTaskTitle(title);
     }
 
     return (
@@ -25,7 +26,7 @@ const ModalAddTask = (props) => {
                 <label htmlFor="title">Title</label>
             </div>
             <div className="form-task__inputBox">
-                <button type="submit" className="form-task__submit btn" onClick={addTask}>
+                <button type="submit" className="form-task__submit btn" onClick={onAddTask}>
                     Add Task
                 </button>
             </div>

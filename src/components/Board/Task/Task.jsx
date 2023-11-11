@@ -2,6 +2,7 @@ import React from "react";
 import styleTask from "./Task.module.css";
 
 const Task = (props) => {
+    // debugger
     return props.tasks.map(task => {
         return (<div className={styleTask.wrapper} data-item={task.id} draggable="true">
             <div className={styleTask.task}>

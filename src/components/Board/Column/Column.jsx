@@ -3,6 +3,7 @@ import Task from "../Task/Task";
 import column from "./Column.module.css";
 
 const Column = (props) => {
+    // debugger
     return (
         <div className={column.column}>
             <div className={column.header}>to-work</div>
