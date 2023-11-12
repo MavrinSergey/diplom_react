@@ -1,9 +1,8 @@
 import React from "react";
-import stylesModalAddTask from './ModalAddTask.module.css';
 
 
 const ModalAddTask = (props) => {
-
+debugger
     const newTitleTask = React.createRef();
 
     const onAddTask = () => {
@@ -20,6 +19,7 @@ const ModalAddTask = (props) => {
             <h2 className="form-task__title">descriptions task</h2>
             <div className="form-task__inputBox">
                 <input type="text" name="title" required=""
+                       key="user_name_key"
                        onChange={onTaskChange}
                        ref={newTitleTask}
                        value={props.newTaskData.title}/>
@@ -33,4 +33,6 @@ const ModalAddTask = (props) => {
         </form>
     )
 }
+
+
 export default ModalAddTask

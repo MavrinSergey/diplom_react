@@ -7,18 +7,19 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Projects from "./components/Projects/Projects";
 import {Route, Routes} from "react-router-dom";
 import store from "./redux/redux-store";
+import BoardContainer from "./components/Board/BoardContainer";
 // import store from "./redux/store";
 
 
 function App(props) {
-debugger
+// debugger
     return (
         <div className={classes.windowUser}>
             <Sidebar/>
             <Header/>
             <div className={classes.content}>
                 <Routes>
-                    <Route path='/board' element={<Board store={props.store} />}></Route>
+                    <Route path='/board' element={<BoardContainer />}></Route>
                     <Route path='/projects' element={<Projects/>}></Route>
                 </Routes>
             </div>
